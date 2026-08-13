@@ -33,7 +33,7 @@ class ProductController extends Controller
             'category_id' => 'required|integer|exists:categories,category_id',
             'supplier' => 'required|integer|exists:suppliers,supplier_id',
             'price' => 'required|numeric|min:0',
-            'stock_quality' => 'required|integer|min:0',
+            'stock_quantity' => 'required|integer|min:0',
             'reorder_level' => 'required|integer|min:0',
         ]);
 
@@ -91,7 +91,7 @@ class ProductController extends Controller
             'category_id' => 'sometimes|required|integer|exists:categories,category_id',
             'supplier' => 'sometimes|required|integer|exists:suppliers,supplier_id',
             'price' => 'sometimes|required|numeric|min:0',
-            'stock_quality' => 'sometimes|required|integer|min:0',
+            'stock_quantity' => 'sometimes|required|integer|min:0',
             'reorder_level' => 'sometimes|required|integer|min:0',
         ]);
 
