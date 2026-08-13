@@ -23,9 +23,11 @@ return new class extends Migration
                 ->constrained('products', 'product_id')
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
+            
 
             $table->integer('qty_ordered');
             $table->integer('qty_received');
+            $table->decimal('purchase_price', 10, 2)->nullable();
             $table->timestamps();
         });
     }

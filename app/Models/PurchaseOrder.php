@@ -19,6 +19,7 @@ class PurchaseOrder extends Model
         'supplier_id',
         'user_id',
         'order_date',
+        'received_date',
         'status',
     ];
 

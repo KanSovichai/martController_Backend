@@ -32,6 +32,7 @@ class PurchaseOrderController extends Controller
             'supplier_id' => 'required|integer|exists:suppliers,supplier_id',
             'user_id' => 'required|integer|exists:users,users_id',
             'order_date' => 'required|date',
+            'received_date' => 'nullable|date',
             'status' => 'required|string|max:255',
         ]);
 
@@ -88,6 +89,7 @@ class PurchaseOrderController extends Controller
             'supplier_id' => 'sometimes|required|integer|exists:suppliers,supplier_id',
             'user_id' => 'sometimes|required|integer|exists:users,users_id',
             'order_date' => 'sometimes|required|date',
+            'received_date' => 'nullable|date',
             'status' => 'sometimes|required|string|max:255',
         ]);
 

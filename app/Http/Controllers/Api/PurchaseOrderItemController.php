@@ -33,6 +33,7 @@ class PurchaseOrderItemController extends Controller
             'product_id' => 'required|integer|exists:products,product_id',
             'qty_ordered' => 'required|integer|min:0',
             'qty_received' => 'required|integer|min:0',
+             'purchase_price' => 'nullable|numeric|min:0',
         ]);
 
         if ($validator->fails()) {
@@ -89,6 +90,7 @@ class PurchaseOrderItemController extends Controller
             'product_id' => 'sometimes|required|integer|exists:products,product_id',
             'qty_ordered' => 'sometimes|required|integer|min:0',
             'qty_received' => 'sometimes|required|integer|min:0',
+            'purchase_price' => 'nullable|numeric|min:0',
         ]);
 
         if ($validator->fails()) {

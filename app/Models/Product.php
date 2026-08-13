@@ -20,7 +20,7 @@ class Product extends Model
         'category_id',
         'supplier',
         'price',
-        'stock_quality',
+        'stock_quantity',
         'reorder_level',
     ];
 

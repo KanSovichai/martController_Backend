@@ -26,7 +26,7 @@ return new class extends Migration
                 ->restrictOnDelete();
 
             $table->decimal('price', 10, 2);
-            $table->integer('stock_quality');
+            $table->integer('stock_quantity');
             $table->integer('reorder_level');
             $table->timestamps();
         });

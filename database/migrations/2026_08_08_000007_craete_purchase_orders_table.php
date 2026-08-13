@@ -25,8 +25,10 @@ return new class extends Migration
                 ->restrictOnDelete();
 
             $table->date('order_date');
+            $table->date('received_date')->nullable();
             $table->string('status');
             $table->timestamps();
+
         });
     }
 
